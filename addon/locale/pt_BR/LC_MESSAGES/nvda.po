@@ -121,7 +121,32 @@ msgid "Run accessible internet speed tests (download, upload, ping) directly fro
 msgstr "Faça testes de velocidade de internet (download, upload e ping) de forma acessível, diretamente no NVDA. Histórico integrado, interface amigável e suporte a múltiplos idiomas."
 
 msgid "Internet Speed Test"
-msgstr "Internet Speed Test"
+msgstr "Teste de Velocidade da Internet"
 
 msgid "Opens the NVDA Speedtest dialog."
 msgstr "Abre o diálogo do NVDA Speedtest."
+
+
+msgid "Copy selected item"
+msgstr "Copiar item selecionado"
+
+msgid "Please select an item to copy."
+msgstr "Selecione um item para copiar."
+
+msgid "No item selected"
+msgstr "Nenhum item selecionado"
+
+msgid "Copied to clipboard."
+msgstr "Copiado para a área de transferência."
+
+msgid "Success"
+msgstr "Sucesso"
+
+msgid "Failed to open clipboard."
+msgstr "Falha ao abrir a área de transferência."
+
+msgid "Error"
+msgstr "Erro"
+
+msgid "Test result details"
+msgstr "Detalhes do resultado do teste"

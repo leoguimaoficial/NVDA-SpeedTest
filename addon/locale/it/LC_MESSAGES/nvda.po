@@ -94,7 +94,7 @@ msgid "Start test"
 msgstr "Avvia test"
 
 msgid "Test canceled or failed."
-msgstr "Test annullato o fallito."
+msgstr "Test annullato o non riuscito."
 
 msgid "Ping: {ping} ms\nDownload: {down} Mbps\nUpload: {up} Mbps"
 msgstr "Ping: {ping} ms\nDownload: {down} Mbps\nUpload: {up} Mbps"
@@ -118,11 +118,35 @@ msgid "Clear history"
 msgstr "Cancella cronologia"
 
 msgid "Internet Speed Test"
-msgstr "Internet Speed Test"
+msgstr "Test velocità Internet"
 
 msgid "Opens the NVDA Speedtest dialog."
 msgstr "Apre la finestra di dialogo di NVDA Speedtest."
 
-
 msgid "Run accessible internet speed tests (download, upload, ping) directly from NVDA. Friendly interface, spoken results, integrated history and multi-language support."
-msgstr "Esegui test di velocità Internet accessibili (download, upload e ping) direttamente da NVDA. Interfaccia intuitiva, risultati vocali, cronologia integrata e supporto multilingue."
+msgstr "Esegui test di velocità Internet accessibili (download, upload, ping) direttamente da NVDA. Interfaccia intuitiva, risultati vocali, cronologia integrata e supporto multilingue."
+
+
+msgid "Copy selected item"
+msgstr "Copia elemento selezionato"
+
+msgid "Please select an item to copy."
+msgstr "Seleziona un elemento da copiare."
+
+msgid "No item selected"
+msgstr "Nessun elemento selezionato"
+
+msgid "Copied to clipboard."
+msgstr "Copiato negli appunti."
+
+msgid "Success"
+msgstr "Successo"
+
+msgid "Failed to open clipboard."
+msgstr "Impossibile accedere agli appunti."
+
+msgid "Error"
+msgstr "Errore"
+
+msgid "Test result details"
+msgstr "Dettagli del risultato del test"
