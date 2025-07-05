@@ -121,7 +121,6 @@ msgid "Run accessible internet speed tests (download, upload, ping) directly fro
 msgstr "Realiza pruebas de velocidad de Internet accesibles (descarga, subida, ping) directamente desde NVDA. Interfaz amigable, resultados hablados, historial integrado y soporte multilingüe."
 
 msgid "Internet Speed Test"
-msgstr "Prueba de velocidad de Internet"
 
 msgid "Opens the NVDA Speedtest dialog."
 msgstr "Abre el diálogo de prueba de velocidad de NVDA."

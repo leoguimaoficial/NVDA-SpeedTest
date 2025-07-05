@@ -118,7 +118,6 @@ msgid "Clear history"
 msgstr "Effacer l'historique"
 
 msgid "Internet Speed Test"
-msgstr "Test de vitesse Internet"
 
 msgid "Opens the NVDA Speedtest dialog."
 msgstr "Ouvre la fenêtre de dialogue NVDA Speedtest."

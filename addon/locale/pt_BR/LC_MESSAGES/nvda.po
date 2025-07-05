@@ -120,7 +120,6 @@ msgstr "Limpar histórico"
 msgid "Run accessible internet speed tests (download, upload, ping) directly from NVDA. Friendly interface, spoken results, integrated history and multi-language support."
 msgstr "Faça testes de velocidade de internet (download, upload e ping) de forma acessível, diretamente no NVDA. Histórico integrado, interface amigável e suporte a múltiplos idiomas."
 
-msgid "Internet Speed Test"
 msgstr "Teste de Velocidade da Internet"
 
 msgid "Opens the NVDA Speedtest dialog."

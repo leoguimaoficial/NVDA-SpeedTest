@@ -118,7 +118,6 @@ msgid "Clear history"
 msgstr "Cancella cronologia"
 
 msgid "Internet Speed Test"
-msgstr "Test velocità Internet"
 
 msgid "Opens the NVDA Speedtest dialog."
 msgstr "Apre la finestra di dialogo di NVDA Speedtest."
