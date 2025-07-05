@@ -119,8 +119,6 @@ msgstr "Borrar historial"
 
 msgid "Run accessible internet speed tests (download, upload, ping) directly from NVDA. Friendly interface, spoken results, integrated history and multi-language support."
 msgstr "Realiza pruebas de velocidad de Internet accesibles (descarga, subida, ping) directamente desde NVDA. Interfaz amigable, resultados hablados, historial integrado y soporte multilingüe."
-
-
 msgid "Opens the NVDA Speedtest dialog."
 msgstr "Abre el diálogo de prueba de velocidad de NVDA."
 

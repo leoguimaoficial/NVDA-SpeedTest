@@ -124,7 +124,6 @@ msgstr "Faça testes de velocidade de internet (download, upload e ping) de form
 msgid "Opens the NVDA Speedtest dialog."
 msgstr "Abre o diálogo do NVDA Speedtest."
 
-
 msgid "Copy selected item"
 msgstr "Copiar item selecionado"
 
