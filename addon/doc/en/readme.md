@@ -6,8 +6,7 @@
 
 * Speed test (download, upload, and ping) with automatic spoken results.
 * Test history, including date and summary.
-* Full details: server, jitter, packet loss, and IPs.
-* Button to cancel a running test.
+* Button to copy individual result items (ping, download, upload, etc.) to the clipboard, or use the **Ctrl+C** shortcut on the selected item.
 * Customizable hotkey (default: `NVDA+Shift+L`).
 * Multi-language support.
 
@@ -19,7 +18,8 @@
 2. Open the add-on using the default hotkey (`NVDA+Shift+L`) or via the NVDA menu at **Tools → Internet Speed Test**.
 3. On the main window, press **Start test** to run the speed test.
 4. Use the **Cancel** button to stop the test if needed.
-5. Navigate the history with the arrow keys; view details, delete individual tests, or clear all history.
+5. Navigate the history with the arrow keys; view details, delete individual tests, or clear all history.  
+   To copy an individual result (ping, download, upload, etc.), select the desired item and either press the **Copy** button or use the **Ctrl+C** shortcut. The value will be copied to the clipboard.
 6. To change the hotkey, go to **Preferences → Input Gestures** and search for “NVDA SpeedTest”.
 
 ---

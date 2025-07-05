@@ -8,6 +8,7 @@ O **NVDA SpeedTest** é um complemento que permite realizar **testes de velocida
 - **Histórico dos testes** realizados, com data e resumo.
 - **Detalhes completos** de cada teste, incluindo servidor, jitter, perda de pacotes e IPs.
 - Botão para **cancelar o teste** durante a execução.
+- Opção para **copiar o resultado do teste** para a área de transferência.
 
 ## Como usar
 
@@ -15,7 +16,7 @@ O **NVDA SpeedTest** é um complemento que permite realizar **testes de velocida
    Ou acesse pelo menu do NVDA em **Ferramentas → Internet Speed Test**.
 2. **Na janela principal**, pressione **Iniciar teste**. O teste começará e, ao finalizar, o resultado será anunciado.
 3. Para **cancelar um teste**, use o botão **Cancelar** enquanto o teste está rodando.
-4. **Navegue pelo histórico** usando as setas. Você pode ver detalhes, excluir um teste ou limpar todo o histórico.
+Para **copiar um item do resultado do teste** (como ping, download, upload, etc.), selecione o item desejado na lista de resultados e pressione o botão **Copiar** ou use o atalho **Ctrl+C**. O valor selecionado será copiado para a área de transferência.
 5. Para **alterar o atalho**, vá em **Preferências → Definir comandos** e procure por “NVDA SpeedTest”.
 
 ## Perguntas frequentes
