@@ -117,12 +117,33 @@ msgstr "Voulez-vous vraiment effacer tout l'historique ?"
 msgid "Clear history"
 msgstr "Effacer l'historique"
 
-msgid "Internet Speed Test"
-msgstr "Internet Speed Test"
 
 msgid "Opens the NVDA Speedtest dialog."
 msgstr "Ouvre la fenêtre de dialogue NVDA Speedtest."
 
-
 msgid "Run accessible internet speed tests (download, upload, ping) directly from NVDA. Friendly interface, spoken results, integrated history and multi-language support."
 msgstr "Effectuez des tests de vitesse Internet accessibles (téléchargement, envoi, ping) directement depuis NVDA. Interface conviviale, résultats vocalisés, historique intégré et prise en charge multilingue."
+
+msgid "Copy selected item"
+msgstr "Copier l'élément sélectionné"
+
+msgid "Please select an item to copy."
+msgstr "Veuillez sélectionner un élément à copier."
+
+msgid "No item selected"
+msgstr "Aucun élément sélectionné"
+
+msgid "Copied to clipboard."
+msgstr "Copié dans le presse-papiers."
+
+msgid "Success"
+msgstr "Succès"
+
+msgid "Failed to open clipboard."
+msgstr "Échec de l'ouverture du presse-papiers."
+
+msgid "Error"
+msgstr "Erreur"
+
+msgid "Test result details"
+msgstr "Détails du résultat du test"

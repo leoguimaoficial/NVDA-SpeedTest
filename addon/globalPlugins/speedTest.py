@@ -92,26 +92,58 @@ def _run_speedtest(cancel_evt: threading.Event, proc_holder: list):
             pass
 
 class DetailsDialog(wx.Dialog):
-    def __init__(self, parent, data:dict):
-        super().__init__(parent, title=_("Test details"), size=(560,460))
+    def __init__(self, parent, data: dict):
+        super().__init__(parent, title=_("Test details"), size=(560, 500))
         self.SetEscapeId(wx.ID_CANCEL)
         pnl = wx.Panel(self)
-        self.lst = wx.ListBox(pnl)
+
+        self.lst = wx.ListBox(pnl, name=_("Test result details"))
         url = data.get("result", {}).get("url", "")
+        btn_copy = wx.Button(pnl, label=_("Copy selected item"))
         btn_open = wx.Button(pnl, label=_("Open in browser"))
         btn_back = wx.Button(pnl, id=wx.ID_CANCEL, label=_("Back"))
 
         vs = wx.BoxSizer(wx.VERTICAL)
-        vs.Add(self.lst,1,wx.ALL|wx.EXPAND,10)
-        vs.Add(btn_open,0,wx.LEFT|wx.BOTTOM,10)
-        vs.Add(btn_back,0,wx.LEFT|wx.BOTTOM,10)
+        vs.Add(self.lst, 1, wx.ALL | wx.EXPAND, 10)
+        vs.Add(btn_copy, 0, wx.LEFT | wx.BOTTOM, 10)
+        vs.Add(btn_open, 0, wx.LEFT | wx.BOTTOM, 10)
+        vs.Add(btn_back, 0, wx.LEFT | wx.BOTTOM, 10)
         pnl.SetSizer(vs)
 
-        self.lst.InsertItems(_format_details(data),0)
+        self.lst.InsertItems(_format_details(data), 0)
+
         btn_open.Enable(bool(url))
+
+        btn_copy.Bind(wx.EVT_BUTTON, self._copy_selected)
         btn_open.Bind(wx.EVT_BUTTON, lambda e: webbrowser.open(url))
         btn_back.Bind(wx.EVT_BUTTON, lambda e: self.EndModal(wx.ID_CANCEL))
-        self.Bind(wx.EVT_CHAR_HOOK, lambda e: (self.EndModal(wx.ID_CANCEL) if e.GetKeyCode()==wx.WXK_ESCAPE else e.Skip()))
+
+        self.Bind(wx.EVT_CHAR_HOOK, self._on_key)
+
+    def _on_key(self, event):
+        key = event.GetKeyCode()
+        control_down = event.ControlDown()
+
+        if key == wx.WXK_ESCAPE:
+            self.EndModal(wx.ID_CANCEL)
+        elif control_down and key == ord('C'):
+            self._copy_selected(event)
+        else:
+            event.Skip()
+
+    def _copy_selected(self, event):
+        sel = self.lst.GetSelection()
+        if sel == wx.NOT_FOUND:
+            wx.MessageBox(_("Please select an item to copy."), _("No item selected"))
+            return
+
+        text = self.lst.GetString(sel)
+        if wx.TheClipboard.Open():
+            wx.TheClipboard.SetData(wx.TextDataObject(text))
+            wx.TheClipboard.Close()
+            wx.MessageBox(_("Copied to clipboard."), _("Success"))
+        else:
+            wx.MessageBox(_("Failed to open clipboard."), _("Error"))
 
 class SpeedTestDialog(wx.Dialog):
     def __init__(self, parent):

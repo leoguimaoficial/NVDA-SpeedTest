@@ -28,19 +28,19 @@ msgid "• ISP: {isp}"
 msgstr "• ISP: {isp}"
 
 msgid "• External IP: {ip}"
-msgstr "• IP externo: {ip}"
+msgstr "• IP externa: {ip}"
 
 msgid "• Internal IP: {ip}"
-msgstr "• IP interno: {ip}"
+msgstr "• IP interna: {ip}"
 
 msgid "Error formatting details"
 msgstr "Error al formatear los detalles"
 
 msgid "speedtest.exe not found in the add-on folder."
-msgstr "speedtest.exe no encontrado en la carpeta del complemento."
+msgstr "speedtest.exe no se encontró en la carpeta del complemento."
 
 msgid "Failed to run speedtest.exe"
-msgstr "Error al ejecutar speedtest.exe"
+msgstr "Fallo al ejecutar speedtest.exe"
 
 msgid "Test details"
 msgstr "Detalles de la prueba"
@@ -55,7 +55,7 @@ msgid "NVDA Speedtest"
 msgstr "NVDA Speedtest"
 
 msgid "Click Start to measure your connection."
-msgstr "Haz clic en Iniciar para probar tu conexión."
+msgstr "Haz clic en Iniciar para medir tu conexión."
 
 msgid "&Start test"
 msgstr "&Iniciar prueba"
@@ -79,7 +79,7 @@ msgid "History:"
 msgstr "Historial:"
 
 msgid "This test uses Ookla's Speedtest CLI. By proceeding, you agree to the Terms. Continue?"
-msgstr "Esta prueba utiliza Speedtest CLI de Ookla. Al continuar, aceptas los Términos. ¿Continuar?"
+msgstr "Esta prueba usa el Speedtest CLI de Ookla. Al continuar, aceptas los Términos. ¿Deseas continuar?"
 
 msgid "Accept terms"
 msgstr "Aceptar términos"
@@ -100,28 +100,49 @@ msgid "Ping: {ping} ms\nDownload: {down} Mbps\nUpload: {up} Mbps"
 msgstr "Ping: {ping} ms\nDescarga: {down} Mbps\nSubida: {up} Mbps"
 
 msgid "SpeedTest result"
-msgstr "Resultado SpeedTest"
+msgstr "Resultado de SpeedTest"
 
 msgid "Error: {err}"
 msgstr "Error: {err}"
 
 msgid "Are you sure you want to delete this test?"
-msgstr "¿Seguro que deseas eliminar esta prueba?"
+msgstr "¿Estás seguro de que deseas eliminar esta prueba?"
 
 msgid "Confirm delete"
 msgstr "Confirmar eliminación"
 
 msgid "Are you sure you want to clear all history?"
-msgstr "¿Seguro que deseas borrar todo el historial?"
+msgstr "¿Estás seguro de que deseas borrar todo el historial?"
 
 msgid "Clear history"
 msgstr "Borrar historial"
 
-msgid "Internet Speed Test"
-msgstr "Internet Speed Test"
-
-msgid "Opens the NVDA Speedtest dialog."
-msgstr "Abre el diálogo de NVDA Speedtest."
-
 msgid "Run accessible internet speed tests (download, upload, ping) directly from NVDA. Friendly interface, spoken results, integrated history and multi-language support."
-msgstr "Realiza pruebas de velocidad de internet accesibles (descarga, subida y ping) directamente desde NVDA. Interfaz amigable, resultados hablados, historial integrado y soporte multilingüe."
+msgstr "Realiza pruebas de velocidad de Internet accesibles (descarga, subida, ping) directamente desde NVDA. Interfaz amigable, resultados hablados, historial integrado y soporte multilingüe."
+msgid "Opens the NVDA Speedtest dialog."
+msgstr "Abre el diálogo de prueba de velocidad de NVDA."
+
+
+msgid "Copy selected item"
+msgstr "Copiar elemento seleccionado"
+
+msgid "Please select an item to copy."
+msgstr "Por favor, selecciona un elemento para copiar."
+
+msgid "No item selected"
+msgstr "Ningún elemento seleccionado"
+
+msgid "Copied to clipboard."
+msgstr "Copiado al portapapeles."
+
+msgid "Success"
+msgstr "Éxito"
+
+msgid "Failed to open clipboard."
+msgstr "No se pudo abrir el portapapeles."
+
+msgid "Error"
+msgstr "Error"
+
+msgid "Test result details"
+msgstr "Detalles del resultado de la prueba"
