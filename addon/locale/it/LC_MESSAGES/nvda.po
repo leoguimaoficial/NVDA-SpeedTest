@@ -148,3 +148,6 @@ msgstr "Errore"
 
 msgid "Test result details"
 msgstr "Dettagli del risultato del test"
+
+msgid "No tests found."
+msgstr "Nessun test trovato."

@@ -7,7 +7,7 @@ addon_info = {
     "addon_name": "NVDASpeedTest",
     "addon_summary": _("NVDA SpeedTest"),
     "addon_description": _("Run accessible internet speed tests (download, upload, ping) directly from NVDA. Friendly interface, spoken results, integrated history and multi-language support."),
-    "addon_version": "1.0",
+    "addon_version": "1.1",
     "addon_author": "Leo Guima",
     "addon_url": "https://github.com/leoguimaoficial/NVDA-SpeedTest",
     "addon_sourceURL": "https://github.com/leoguimaoficial/NVDA-SpeedTest",

@@ -2,6 +2,8 @@
 
 **NVDA SpeedTest** is an open source add-on for NVDA that allows you to run internet speed tests (download, upload, and ping) in a fully accessible way, with spoken results and integrated history.
 
+---
+
 ## Features
 
 * Speed test (download, upload, and ping) with automatic spoken results.
@@ -9,6 +11,7 @@
 * Full details: server, jitter, packet loss, and IPs.
 * Button to cancel a running test.
 * Customizable hotkey (default: `NVDA+Shift+L`).
+* Copy results to clipboard with `Ctrl+C` (on a selected item) or with the **Copy** button after selecting an item in the list.
 * Multi-language support.
 
 ---
@@ -20,7 +23,24 @@
 3. On the main window, press **Start test** to run the speed test.
 4. Use the **Cancel** button to stop the test if needed.
 5. Navigate the history with the arrow keys; view details, delete individual tests, or clear all history.
-6. To change the hotkey, go to **Preferences → Input Gestures** and search for “NVDA SpeedTest”.
+6. **To copy a test result to the clipboard:**
+
+   * Select the desired item in the list and press `Ctrl+C`,
+   * or use the **Copy** button after selecting an item in the list.
+7. To change the hotkey, go to **Preferences → Input Gestures** and search for “NVDA SpeedTest”.
+
+---
+
+## Changelog
+
+### 1.1 (latest)
+
+* **Fix:** Empty history list now reports as "No tests found" instead of "Unknown list".
+* **New:** Added ability to copy test results to clipboard with `Ctrl+C` or the **Copy** button after selecting an item in the list.
+
+### 1.0
+
+* Initial release.
 
 ---
 

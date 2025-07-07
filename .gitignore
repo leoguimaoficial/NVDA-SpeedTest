@@ -1,0 +1,17 @@
+manifest.ini
+
+*.mo
+*.html
+build/
+dist/
+*.egg-info/
+*.pyc
+__pycache__/
+.vscode/
+.idea/
+*~
+*.bak
+.sconsign.dblite
+*.nvda-addon
+locale/*/LC_MESSAGES/*.mo
+addon/globalPlugins/__pycache__/

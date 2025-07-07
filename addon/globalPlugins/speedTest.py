@@ -4,6 +4,7 @@ import globalPluginHandler
 import gui
 import addonHandler
 from scriptHandler import script
+import ui
 
 addonHandler.initTranslation()
 
@@ -12,6 +13,7 @@ CLI_PATH    = os.path.join(ADDON_DIR, "speedtest.exe")
 HISTORY_FILE= os.path.join(ADDON_DIR, "speed_history.json")
 CONF_FILE   = os.path.join(ADDON_DIR, "speed_conf.json")
 DEFAULT_GESTURE = "kb:NVDA+shift+l"
+EMPTY_HISTORY_MSG = _("No tests found.")
 
 def _load_json(path, default):
     try:
@@ -67,7 +69,7 @@ def _run_speedtest(cancel_evt: threading.Event, proc_holder: list):
 
     cmd = [CLI_PATH, "--accept-license", "--accept-gdpr", "--format=json"]
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    proc_holder.append(proc)  # Save reference for cancel
+    proc_holder.append(proc)
 
     try:
         while True:
@@ -113,12 +115,16 @@ class DetailsDialog(wx.Dialog):
         self.lst.InsertItems(_format_details(data), 0)
 
         btn_open.Enable(bool(url))
+        btn_copy.Enable(False)
 
         btn_copy.Bind(wx.EVT_BUTTON, self._copy_selected)
         btn_open.Bind(wx.EVT_BUTTON, lambda e: webbrowser.open(url))
         btn_back.Bind(wx.EVT_BUTTON, lambda e: self.EndModal(wx.ID_CANCEL))
 
+        self.lst.Bind(wx.EVT_LISTBOX, lambda e: btn_copy.Enable(self.lst.GetSelection() != wx.NOT_FOUND))
         self.Bind(wx.EVT_CHAR_HOOK, self._on_key)
+
+        self.btn_copy = btn_copy  
 
     def _on_key(self, event):
         key = event.GetKeyCode()
@@ -134,16 +140,17 @@ class DetailsDialog(wx.Dialog):
     def _copy_selected(self, event):
         sel = self.lst.GetSelection()
         if sel == wx.NOT_FOUND:
-            wx.MessageBox(_("Please select an item to copy."), _("No item selected"))
+            wx.CallLater(120, lambda: ui.message(_("Please select an item to copy.")))
             return
 
         text = self.lst.GetString(sel)
         if wx.TheClipboard.Open():
             wx.TheClipboard.SetData(wx.TextDataObject(text))
             wx.TheClipboard.Close()
-            wx.MessageBox(_("Copied to clipboard."), _("Success"))
+            wx.CallLater(120, lambda: ui.message(_("Copied to clipboard.")))
         else:
-            wx.MessageBox(_("Failed to open clipboard."), _("Error"))
+            wx.CallLater(120, lambda: ui.message(_("Failed to open clipboard.")))
+
 
 class SpeedTestDialog(wx.Dialog):
     def __init__(self, parent):
@@ -188,8 +195,11 @@ class SpeedTestDialog(wx.Dialog):
 
         raw = _load_json(HISTORY_FILE, [])
         self.items = raw if raw and isinstance(raw[0], dict) else []
-        for it in self.items:
-            self.lst.Append(it["summary"])
+        if not self.items:
+            self.lst.Append(EMPTY_HISTORY_MSG)
+        else:
+            for it in self.items:
+                self.lst.Append(it["summary"])
         self._update_buttons()
 
         self._progress_timer = None
@@ -219,10 +229,15 @@ class SpeedTestDialog(wx.Dialog):
         self._progress_pos = 0
 
     def _update_buttons(self):
-        sel = self.lst.GetSelection() != wx.NOT_FOUND
-        self.btn_view.Enable(sel)
-        self.btn_del.Enable(sel)
-        self.btn_clear.Enable(bool(self.items))
+        if self.lst.GetCount() == 1 and self.lst.GetString(0) == EMPTY_HISTORY_MSG:
+            self.btn_view.Enable(False)
+            self.btn_del.Enable(False)
+            self.btn_clear.Enable(False)
+        else:
+            sel = self.lst.GetSelection() != wx.NOT_FOUND
+            self.btn_view.Enable(sel)
+            self.btn_del.Enable(sel)
+            self.btn_clear.Enable(bool(self.items))
 
     def _on_key(self, evt):
         if evt.GetKeyCode() == wx.WXK_ESCAPE:
@@ -297,6 +312,9 @@ class SpeedTestDialog(wx.Dialog):
             ping=ping, down=down, up=up)
         self.info.SetLabel(msg.replace("\n","  "))
         wx.MessageBox(msg, _("SpeedTest result"))
+
+        if self.lst.GetCount() == 1 and self.lst.GetString(0) == EMPTY_HISTORY_MSG:
+            self.lst.Delete(0)
         summary = f"{datetime.now().strftime('%d/%m %H:%M')} → {down}/{up} ({ping}ms)"
         self.lst.InsertItems([summary],0)
         self.items.insert(0,{"summary":summary,"full":data})
@@ -320,14 +338,19 @@ class SpeedTestDialog(wx.Dialog):
         if sel==wx.NOT_FOUND: return
         dlg = wx.MessageDialog(self, _("Are you sure you want to delete this test?"), _("Confirm delete"), style=wx.YES_NO|wx.ICON_WARNING)
         if dlg.ShowModal()==wx.ID_YES:
-            self.lst.Delete(sel); del self.items[sel]; _save_json(HISTORY_FILE,self.items); self._update_buttons()
+            self.lst.Delete(sel); del self.items[sel]; _save_json(HISTORY_FILE,self.items)
+            if not self.items:
+                self.lst.Append(EMPTY_HISTORY_MSG)
+            self._update_buttons()
         dlg.Destroy()
 
     def _clear_all(self, evt):
         if not self.items: return
         dlg = wx.MessageDialog(self, _("Are you sure you want to clear all history?"), _("Clear history"), style=wx.YES_NO|wx.ICON_QUESTION)
         if dlg.ShowModal()==wx.ID_YES:
-            self.lst.Clear(); self.items.clear(); _save_json(HISTORY_FILE,[]); self._update_buttons()
+            self.lst.Clear(); self.items.clear(); _save_json(HISTORY_FILE,[])
+            self.lst.Append(EMPTY_HISTORY_MSG)
+            self._update_buttons()
         dlg.Destroy()
 
     def _on_close(self, evt=None):
