@@ -11,7 +11,7 @@
 * Full details: server, jitter, packet loss, and IPs.
 * Button to cancel a running test.
 * Customizable hotkey (default: `NVDA+Shift+L`).
-* Copy results to clipboard with `Ctrl+C` (on a selected item) or with the **Copy** button after selecting an item in the list.
+* Copy results to clipboard with `Ctrl+C` (on a selected item in the details screen) or with the **Copy** button after selecting an item in the test details.
 * Multi-language support.
 
 ---
@@ -25,8 +25,8 @@
 5. Navigate the history with the arrow keys; view details, delete individual tests, or clear all history.
 6. **To copy a test result to the clipboard:**
 
-   * Select the desired item in the list and press `Ctrl+C`,
-   * or use the **Copy** button after selecting an item in the list.
+   * Select the desired item in the **details screen** and press `Ctrl+C`,
+   * or use the **Copy** button after selecting an item in the details screen.
 7. To change the hotkey, go to **Preferences → Input Gestures** and search for “NVDA SpeedTest”.
 
 ---
