@@ -13,7 +13,7 @@ addon_info = {
     "addon_sourceURL": "https://github.com/leoguimaoficial/NVDA-SpeedTest",
     "addon_docFileName": "readme.html",
     "addon_minimumNVDAVersion": "2021.1",
-    "addon_lastTestedNVDAVersion": "2026.3",
+    "addon_lastTestedNVDAVersion": "2026.1",
     "addon_updateChannel": None,
     "addon_license": "GPL v3",
     "addon_licenseURL": "https://www.gnu.org/licenses/gpl-3.0.html",
