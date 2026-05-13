@@ -149,3 +149,375 @@ msgstr "Detalles del resultado de la prueba"
 
 msgid "No tests found."
 msgstr "No se encontraron pruebas."
+
+msgid "Failed to load servers."
+msgstr "No se pudieron cargar los servidores."
+
+msgid "No servers were found."
+msgstr "No se encontraron servidores."
+
+msgid "{location}, {country} - {name} (ID {id})"
+msgstr "{location}, {country} - {name} (ID {id})"
+
+msgid "&Start quick test"
+msgstr "Iniciar prueba &rápida"
+
+msgid "&Advanced test..."
+msgstr "Prueba &avanzada..."
+
+msgid "Start quick test"
+msgstr "Iniciar prueba rápida"
+
+msgid "Testing with server: {server}"
+msgstr "Probando con servidor: {server}"
+
+msgid "Advanced speed test"
+msgstr "Prueba de velocidad avanzada"
+
+msgid "Choose a server to run a fixed-server speed test."
+msgstr "Elige un servidor para ejecutar una prueba con servidor fijo."
+
+msgid "Servers"
+msgstr "Servidores"
+
+msgid "&Remember this server for next time"
+msgstr "&Recordar este servidor para la próxima vez"
+
+msgid "&Refresh servers"
+msgstr "&Actualizar servidores"
+
+msgid "&Start selected test"
+msgstr "&Iniciar prueba seleccionada"
+
+msgid "Loading servers..."
+msgstr "Cargando servidores..."
+
+msgid "Loading servers. Please wait."
+msgstr "Cargando servidores. Por favor, espera."
+
+msgid "Server list loaded. Choose a server and press Start selected test."
+msgstr "Lista de servidores cargada. Elige un servidor y pulsa Iniciar prueba seleccionada."
+
+msgid "Could not load server list: {err}"
+msgstr "No se pudo cargar la lista de servidores: {err}"
+
+msgid "Select a server before starting the test."
+msgstr "Selecciona un servidor antes de iniciar la prueba."
+
+msgid "Internet Speed Test"
+msgstr "Prueba de velocidad de Internet"
+
+msgid "&History insights"
+msgstr "&Resumen del historial"
+
+msgid "History insights"
+msgstr "Resumen del historial"
+
+msgid "Tests in this view: {count}"
+msgstr "Pruebas en esta vista: {count}"
+
+msgid "Average ping: {ping:.1f} ms"
+msgstr "Ping medio: {ping:.1f} ms"
+
+msgid "Average download: {download:.2f} Mbps"
+msgstr "Descarga media: {download:.2f} Mbps"
+
+msgid "Average upload: {upload:.2f} Mbps"
+msgstr "Subida media: {upload:.2f} Mbps"
+
+msgid "Best download: {download:.2f} Mbps ({server})"
+msgstr "Mejor descarga: {download:.2f} Mbps ({server})"
+
+msgid "Worst download: {download:.2f} Mbps ({server})"
+msgstr "Peor descarga: {download:.2f} Mbps ({server})"
+
+msgid "Best upload: {upload:.2f} Mbps ({server})"
+msgstr "Mejor subida: {upload:.2f} Mbps ({server})"
+
+msgid "Worst upload: {upload:.2f} Mbps ({server})"
+msgstr "Peor subida: {upload:.2f} Mbps ({server})"
+
+msgid "Best ping: {ping:.1f} ms ({server})"
+msgstr "Mejor ping: {ping:.1f} ms ({server})"
+
+msgid "Worst ping: {ping:.1f} ms ({server})"
+msgstr "Peor ping: {ping:.1f} ms ({server})"
+
+msgid "Comparison with previous test: not enough data."
+msgstr "Comparación con la prueba anterior: no hay suficientes datos."
+
+msgid "Compared with previous test:"
+msgstr "Comparado con la prueba anterior:"
+
+msgid "Download change: {change:+.2f} Mbps"
+msgstr "Cambio de descarga: {change:+.2f} Mbps"
+
+msgid "Upload change: {change:+.2f} Mbps"
+msgstr "Cambio de subida: {change:+.2f} Mbps"
+
+msgid "Ping change: {change:+.1f} ms"
+msgstr "Cambio de ping: {change:+.1f} ms"
+
+msgid "Unknown server"
+msgstr "Servidor desconocido"
+
+msgid "Date filter:"
+msgstr "Filtro de fecha:"
+
+msgid "All history"
+msgstr "Todo el historial"
+
+msgid "Today"
+msgstr "Hoy"
+
+msgid "Last 7 days"
+msgstr "Últimos 7 días"
+
+msgid "Last 30 days"
+msgstr "Últimos 30 días"
+
+msgid "Date filter"
+msgstr "Filtro de fecha"
+
+msgid "History statistics"
+msgstr "Estadísticas del historial"
+
+msgid "Filtered history"
+msgstr "Historial filtrado"
+
+msgid "&Copy summary"
+msgstr "&Copiar resumen"
+
+msgid "Export &CSV..."
+msgstr "Exportar &CSV..."
+
+msgid "Export &JSON..."
+msgstr "Exportar &JSON..."
+
+msgid "Statistics:"
+msgstr "Estadísticas:"
+
+msgid "Filtered history:"
+msgstr "Historial filtrado:"
+
+msgid "{format} files (*.{extension})|*.{extension}"
+msgstr "Archivos {format} (*.{extension})|*.{extension}"
+
+msgid "Export history"
+msgstr "Exportar historial"
+
+msgid "Could not export history: {err}"
+msgstr "No se pudo exportar el historial: {err}"
+
+msgid "History exported."
+msgstr "Historial exportado."
+
+msgid "&Settings..."
+msgstr "&Configuración..."
+
+msgid "SpeedTest settings"
+msgstr "Configuración de SpeedTest"
+
+msgid "Optional features:"
+msgstr "Funciones opcionales:"
+
+msgid "&Enable advanced server selection"
+msgstr "&Activar selección avanzada de servidor"
+
+msgid "Shows the advanced test button so you can choose a fixed Speedtest server."
+msgstr "Muestra el botón de prueba avanzada para elegir un servidor fijo de Speedtest."
+
+msgid "&Enable history insights"
+msgstr "&Activar resumen inteligente del historial"
+
+msgid "Shows history insights with averages, best and worst results, filters and export."
+msgstr "Muestra el resumen del historial con promedios, mejores y peores resultados, filtros y exportación."
+
+msgid "&Enable simple diagnosis after tests"
+msgstr "&Activar diagnóstico sencillo después de las pruebas"
+
+msgid "Adds plain-language guidance after a test, such as video call readiness or high ping."
+msgstr "Añade orientación en lenguaje sencillo después de una prueba, como calidad para videollamadas o ping alto."
+
+msgid "&Enable custom display unit"
+msgstr "&Activar unidad de visualización personalizada"
+
+msgid "Lets you choose how speeds are displayed. If disabled, results use Mbps."
+msgstr "Permite elegir cómo se muestran las velocidades. Si está desactivado, los resultados usan Mbps."
+
+msgid "&Enable connection alerts"
+msgstr "&Activar alertas de conexión"
+
+msgid "Lets NVDA warn when download, upload, ping or packet loss crosses your limits."
+msgstr "Permite que NVDA avise cuando la descarga, la subida, el ping o la pérdida de paquetes superen tus límites."
+
+msgid "Display speed unit selection"
+msgstr "Selección de unidad de velocidad mostrada"
+
+msgid "Choose the speed unit used in results and details."
+msgstr "Elige la unidad de velocidad usada en resultados y detalles."
+
+msgid "Minimum download alert in Mbps"
+msgstr "Alerta de descarga mínima en Mbps"
+
+msgid "Alert when download is below this Mbps value."
+msgstr "Avisa cuando la descarga esté por debajo de este valor en Mbps."
+
+msgid "Minimum upload alert in Mbps"
+msgstr "Alerta de subida mínima en Mbps"
+
+msgid "Alert when upload is below this Mbps value."
+msgstr "Avisa cuando la subida esté por debajo de este valor en Mbps."
+
+msgid "Maximum ping alert in milliseconds"
+msgstr "Alerta de ping máximo en milisegundos"
+
+msgid "Alert when ping is above this ms value."
+msgstr "Avisa cuando el ping esté por encima de este valor en ms."
+
+msgid "Maximum packet loss alert percentage"
+msgstr "Alerta de porcentaje máximo de pérdida de paquetes"
+
+msgid "Alert when packet loss is above this percentage."
+msgstr "Avisa cuando la pérdida de paquetes esté por encima de este porcentaje."
+
+msgid "Minimum download in Mbps"
+msgstr "Descarga mínima en Mbps"
+
+msgid "Minimum upload in Mbps"
+msgstr "Subida mínima en Mbps"
+
+msgid "Maximum ping in milliseconds"
+msgstr "Ping máximo en milisegundos"
+
+msgid "Maximum packet loss percentage"
+msgstr "Porcentaje máximo de pérdida de paquetes"
+
+msgid "&Save"
+msgstr "&Guardar"
+
+msgid "&Back"
+msgstr "&Atrás"
+
+msgid "Minimum download (Mbps):"
+msgstr "Descarga mínima (Mbps):"
+
+msgid "Minimum upload (Mbps):"
+msgstr "Subida mínima (Mbps):"
+
+msgid "Maximum ping (ms):"
+msgstr "Ping máximo (ms):"
+
+msgid "Maximum packet loss (%):"
+msgstr "Pérdida máxima de paquetes (%):"
+
+msgid "Invalid settings"
+msgstr "Configuración inválida"
+
+msgid "Enter a valid number."
+msgstr "Introduce un número válido."
+
+msgid "Enter a number greater than or equal to zero."
+msgstr "Introduce un número mayor o igual que cero."
+
+msgid "Settings saved."
+msgstr "Configuración guardada."
+
+msgid "Connection below expected."
+msgstr "Conexión por debajo de lo esperado."
+
+msgid "Connection alert"
+msgstr "Alerta de conexión"
+
+msgid "Download below limit: {current:.2f} Mbps, limit {limit:.2f} Mbps."
+msgstr "Descarga por debajo del límite: {current:.2f} Mbps, límite {limit:.2f} Mbps."
+
+msgid "Upload below limit: {current:.2f} Mbps, limit {limit:.2f} Mbps."
+msgstr "Subida por debajo del límite: {current:.2f} Mbps, límite {limit:.2f} Mbps."
+
+msgid "Ping above limit: {current:.1f} ms, limit {limit:.1f} ms."
+msgstr "Ping por encima del límite: {current:.1f} ms, límite {limit:.1f} ms."
+
+msgid "Packet loss above limit: {current:.2f}%, limit {limit:.2f}%."
+msgstr "Pérdida de paquetes por encima del límite: {current:.2f}%, límite {limit:.2f}%."
+
+msgid "Display speed unit"
+msgstr "Unidad de velocidad mostrada"
+
+msgid "Display speed unit:"
+msgstr "Unidad de velocidad mostrada:"
+
+msgid "{value:.2f} {unit}"
+msgstr "{value:.2f} {unit}"
+
+msgid "{value:+.2f} {unit}"
+msgstr "{value:+.2f} {unit}"
+
+msgid "Ping: {ping} ms\nDownload: {down}\nUpload: {up}"
+msgstr "Ping: {ping} ms\nDescarga: {down}\nSubida: {up}"
+
+msgid "Diagnosis:"
+msgstr "Diagnóstico:"
+
+msgid "{date} → {down}/{up} ({ping}ms)"
+msgstr "{date} → {down}/{up} ({ping}ms)"
+
+msgid "{date} -> {down}/{up} ({ping}ms)"
+msgstr "{date} -> {down}/{up} ({ping}ms)"
+
+msgid "Good for video calls."
+msgstr "Buena para videollamadas."
+
+msgid "Video calls may be unstable."
+msgstr "Las videollamadas pueden ser inestables."
+
+msgid "Ping high for gaming."
+msgstr "Ping alto para juegos."
+
+msgid "Good for online gaming."
+msgstr "Buena para juegos en línea."
+
+msgid "Upload low for live streaming."
+msgstr "Subida baja para transmisiones en vivo."
+
+msgid "Upload good for live streaming."
+msgstr "Subida buena para transmisiones en vivo."
+
+msgid "Download low for streaming or large downloads."
+msgstr "Descarga baja para streaming o descargas grandes."
+
+msgid "Packet loss detected."
+msgstr "Pérdida de paquetes detectada."
+
+msgid "Connection looks good for everyday use."
+msgstr "La conexión parece buena para el uso diario."
+
+msgid "Average download: {download}"
+msgstr "Descarga media: {download}"
+
+msgid "Average upload: {upload}"
+msgstr "Subida media: {upload}"
+
+msgid "Best download: {download} ({server})"
+msgstr "Mejor descarga: {download} ({server})"
+
+msgid "Worst download: {download} ({server})"
+msgstr "Peor descarga: {download} ({server})"
+
+msgid "Best upload: {upload} ({server})"
+msgstr "Mejor subida: {upload} ({server})"
+
+msgid "Worst upload: {upload} ({server})"
+msgstr "Peor subida: {upload} ({server})"
+
+msgid "Download change: {change}"
+msgstr "Cambio de descarga: {change}"
+
+msgid "Upload change: {change}"
+msgstr "Cambio de subida: {change}"
+
+msgid "• Download: {speed} ({size:.0f} MB in {seconds:.1f} s)"
+msgstr "• Descarga: {speed} ({size:.0f} MB en {seconds:.1f} s)"
+
+msgid "• Upload: {speed} ({size:.0f} MB in {seconds:.1f} s)"
+msgstr "• Subida: {speed} ({size:.0f} MB en {seconds:.1f} s)"
